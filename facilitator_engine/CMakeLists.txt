@@ -56,7 +56,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_service_files(
    FILES
    GetQuestion.srv
-#   Service2.srv
+   Evaluate.srv
 )
 
 ## Generate actions in the 'action' folder
