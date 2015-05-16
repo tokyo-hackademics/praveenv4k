@@ -15,17 +15,17 @@ public:
 
   QuestionAnswer() : 
     id_(database_interface::DBFieldBase::TEXT, 
-                this, "id", "question", true),
+                this, "id", "question_answer", true),
     question_(database_interface::DBFieldBase::TEXT, 
-                        this, "question", "question", true),
+                        this, "question", "question_answer", true),
     answer_(database_interface::DBFieldBase::TEXT, 
-                        this, "answer", "question", true),
+                        this, "answer", "question_answer", true),
     question_type_(database_interface::DBFieldBase::TEXT, 
-                        this, "question_type", "question", true),
+                        this, "question_type", "question_answer", true),
     evaluation_type_(database_interface::DBFieldBase::TEXT, 
-                        this, "evaluation_type", "question", true),
+                        this, "evaluation_type", "question_answer", true),
     evaluation_logic_(database_interface::DBFieldBase::TEXT, 
-                        this, "evaluation_logic", "question", true)
+                        this, "evaluation_logic", "question_answer", true)
   {
     primary_key_field_ = &id_;
 

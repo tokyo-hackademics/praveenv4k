@@ -10,6 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   message_generation
+  sql_database
 )
 
 ## System dependencies are found with CMake's conventions
@@ -119,11 +120,11 @@ include_directories(
 
 add_executable(facilitator_engine_server src/facilitator_server.cpp)
 target_link_libraries(facilitator_engine_server ${catkin_LIBRARIES})
-add_dependencies(facilitator_engine_server facilitator_engine_generate_messages_cpp)
+add_dependencies(facilitator_engine_server facilitator_engine_generate_messages_cpp ${catkin_EXPORTED_TARGETS})
 
 add_executable(facilitator_engine_client src/facilitator_client.cpp)
 target_link_libraries(facilitator_engine_client ${catkin_LIBRARIES})
-add_dependencies(facilitator_engine_client facilitator_engine_generate_messages_cpp)
+add_dependencies(facilitator_engine_client facilitator_engine_generate_messages_cpp ${catkin_EXPORTED_TARGETS})
 
 #############
 ## Install ##
