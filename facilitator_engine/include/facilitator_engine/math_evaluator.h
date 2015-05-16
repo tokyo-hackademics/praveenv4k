@@ -6,7 +6,7 @@ class MathEvaluator: EvaluatorBase
 {
 public:
   
-  MathEvaluator(double actualAnswer, double receivedAnswer):_actualAnswer(actualAnswer),_receivedAnswer(receivedAnswer) {
+  MathEvaluator(double actualAnswer, double receivedAnswer):_actualAnswer((double)actualAnswer),_receivedAnswer((double)receivedAnswer) {
   }
 
   virtual float Evaluate(){
