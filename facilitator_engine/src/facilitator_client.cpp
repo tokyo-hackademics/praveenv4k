@@ -45,8 +45,8 @@ int main(int argc, char **argv)
     return 1;
   }
 
-  testQuestionService(argv);
   testEvaluateService(1,"Answer is 42!");
-
+  testQuestionService(argv);
+  
   return 0;
 }
