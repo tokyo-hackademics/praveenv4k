@@ -3,6 +3,7 @@
 #include "facilitator_engine/Evaluate.h"
 #include "facilitator_engine/db_access.h"
 #include "database_interface/postgresql_database.h"
+#include "facilitator_engine/geography_evaluator.h"
 
 #define MAX_BUF_SIZE 256
 
@@ -45,6 +46,10 @@ bool evaluate(facilitator_engine::Evaluate::Request  &req,
   return true;
 }
 
+// CHECK_DIST API
+// http://getdistance.geobytes.com/GetDistance?callback=callback&location1=USNYNYOR&location2=USMTBABB 
+// GET GEO LOCATION API
+// http://getcitydetails.geobytes.com/GetCityDetails?fqcn=osaka
 
 int main(int argc, char **argv)
 {
