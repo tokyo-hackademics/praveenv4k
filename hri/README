@@ -1,0 +1,26 @@
+2015-05-17
+
+A human robot interface program for a robot ficilitator
+
+1. 概要
+   子供との教育用対話プログラム。子供をファシリテートして勉強の意欲を高める。
+　 このプログラムはクライアントで、サーバープログラムを起動してデータベース
+　 (postgres SQL)から問題と子供の解答との類似度を取得する。 
+
+
+2. 実行環境
+   Ubuntu14.04 + ROS Indigo
+   
+   ROS Indigoがインストールされていないと動きません。
+   音声認識、音声合成にRospeexを使用していますので、そのインストール
+   が必要です。
+   ROSがWindowsに対応していないので、Windows環境では実行できません。
+
+3. ビルド方法
+   cd ROSのワークスペースディレクトリ
+   catkin_make
+
+4. 実行方法
+   rosrun rospeex_audiomonitor audio_monitor_epd
+　 roslaunch hri hri.launch
+
